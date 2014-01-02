@@ -1,0 +1,20 @@
+
+  Domaci ukol 1: Strom, kde kazdy uzel muze mit libovolny pocet nasledniku.
+
+        Zdrojaky jsou rozdeleny do nekolika souboru. Popis a priklady
+jsou v _main.ml -> cist jako prvni. 'X:\>mosml.exe _main.ml'
+resp. '- use "_main.ml"' natahne vse co je potreba.
+        Poznamka k tomu jak funguje filter. Filter buduje strom pri ceste
+zdola horu. Kazdy vrchol je kontrolovan svym otcem. Pokud u syna S neni
+splnena bool podminka, zaradi otec O potomky S mezi sve potomky ===
+"pohlti" S === potomci S se stanou potomky O. Protoze koren stromu nema
+zadneho otce, musi byt zpracovan samostatne a to tak, ze pokud nevyhovuje
+jeho hodnota podmince, stava se korenem prvni z jeho synu.
+
+                                                        Martin Dvorak
+
+
+
+
+
+

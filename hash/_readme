@@ -1,0 +1,28 @@
+
+                Domaci ukol 2: Hesovani & moduly (SMLNJ)
+
+        Zdrojaky jsou rozdeleny do nekolika souboru. Popis, priklady
+a natahovani je v
+                _main1.ml ... pozadovany example staticky
+                _main2.ml ... example hashovani integeru s referenci
+kazdy main opet natahne vse co je potreba. Popis examplu je v uvnitr mainu.
+Poznamky k implementaci:
+        - OFFLINE ... Implementace je "offline" protoze se pri
+                      vytvareni nove struktury musi prepsat
+                      struktura klice podle signatury HASHKEYOID
+                      a funktorem UniHashTabloid se potom vytvori staticka
+                      hasovaci struktura. Pohodlneji se, ale pracuje
+                      s referenci tj. inserty nevraceji novou tabulku, ale
+                      unit ( reference zustava stejna, tabulka se sice zmeni,
+                      ale nemusim vytvaret novy objekt ). Struktura, ktera
+                      pracuje s referenci na tabulku se vytvori ze staticke
+                      struktury UniHashTabloid funktorem UniRefHashTabloid
+                                                            ---
+        - tabulka ... tabulku jsem udelal "ridkou" tzn. ze pri vytvareni
+                      je tabulka prazdne pole. Kdyz se pridava nova polozka
+                      zahasuje se, tabulka se projde a pokud suplik neexistuje
+                      teprve se vytvori. Tabulka je tedy mensi a prace s ni
+                      by mela byt rychlejsi, protoze v tabulce jsou pouze
+                      ty supliky v kterych neco je.
+
+                                                               Martin Dvorak
